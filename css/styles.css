@@ -1,0 +1,43 @@
+
+body { /* changes all body that using this in their header */
+  background-color: powderblue;
+}
+
+h1 { /* changes all h1s that using this in their header */
+  color: blue;
+  font-size: 300%;
+  font-family: courier;
+}
+
+p { /* changes all paragraphs that using this in their header */
+  color: red;
+  font-size: 300%;
+  font-family: courier;
+  border: 4px solid gold;
+  margin: 50px;
+  padding: 30px;
+}
+
+#pFirst { /* changes all elemnts tagged with this name */
+  color: blue;
+  font-size: 200%;
+  font-style: italic;
+  font-family: sans-serif;
+}
+
+p.error { /* changes all elements that use this */
+  color: red;
+}
+
+a:link, a:visited { /* settings for lins */
+  color: white;
+  background-color: #74433f;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active { /* settings for lins */
+  background-color: red;
+}

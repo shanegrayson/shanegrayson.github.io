@@ -10,6 +10,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
+  <style media="screen">
+    /* Used to create a Horizontal List Bar */
+    #header1 {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333333;
+    }
+
+    #li1 {
+      float: left;
+    }
+
+    #li1 a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    #li1 a:hover {
+      background-color: #111111
+    }
+
+    #header2 {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333333;
+    }
+
+    #li2 {
+      float: center;
+    }
+
+    #li2 a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    #li2 a:hover {
+      background-color: #111111
+    }
+
+    .bestWifus {
+      background-color: pink;
+      color: black;
+      margin: 20px;
+      padding: 20px;
+    }
+
+    span.note {
+      font-size: 150%;
+      color: red;
+      background-color: lightgrey;
+      font-family: monospace;
+    }
+
+  </style>
+
   <!-- Visiable page content -->
   <body style="background-color:dimgrey; color:white">
 
@@ -21,6 +87,7 @@
       <li id="li1"><a href="/index.html">About</a></li>
       <li id="li1"><a href="https://www.w3schools.com/html/html_classes.asp">
         Current W3 Section</a></li>
+      <li id="li1"><a href="#header2">Jump to Bottom</a></li>
     </ul>
 
     <br>
@@ -339,10 +406,12 @@
     <!-- Divs are used as containers for other HTML elements -->
     <div style="background-color:black; color:white; padding:10px; font-size:20px">
       <pre>
-        !#/bin/bash
-        ANS=$1
-        if [ $1 == 33 ]; then
-          echo this is the number 33!
+        function showDokis() {
+          var x = document.getElementsByClassName("bestWifus");
+          for (var i = 0; i < x.length; i++) {
+            x[i].style.display = "";
+          }
+        }
       </pre>
     </div>
 
@@ -350,6 +419,14 @@
     <div class="">
       <h3>How to <span style="color:red">WIN</span> over everyone!</h3>
     </div>
+
+    <button type="button" name="Hide Dokis" onclick="hideDokis()">
+      Hide the Dokis!
+    </button>
+
+    <button type="button" name="Show Dokis" onclick="showDokis()">
+      Show the Dokis!
+    </button>
 
     <div class="bestWifus">
       Monika.
@@ -370,6 +447,58 @@
         It is true that Monika is <span class="note">BEST WIFU</span> you slobs!
       </h3>
     </div>
+
+    <script>
+      function hideDokis() {
+        var x = document.getElementsByClassName("bestWifus");
+        for (var i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+      }
+
+      function showDokis() {
+        var x = document.getElementsByClassName("bestWifus");
+        for (var i = 0; i < x.length; i++) {
+          x[i].style.display = "";
+        }
+      }
+    </script>
+
+    <h2 id="trueDoki">Who is the best Doki?</h2>
+
+    <button type="button" name="the truth" onclick="displayTruth()">
+      Whos the best Doki?
+    </button>
+
+    <script>
+      function displayTruth() {
+        document.getElementById("trueDoki").innerHTML = "Monika is actually best!";
+      }
+    </script>
+
+    <br>
+
+    <button type="button">
+      <a href="https://www.chrono.gg/" target="iframe_gameStore">
+        Chrono Game Store
+      </a>
+    </button>
+
+    <button type="button">
+      <a href="https://www.humblebundle.com/" target="iframe_gameStore">
+        Humble Bundle
+      </a>
+    </button>
+
+    <iframe name="iframe_gameStore"
+    src="https://www.humblebundle.com/"
+    style="width:100%;height:550px;border:none;">
+    </iframe>
+
+    <!-- header bar for website -->
+    <ul id="header2">
+      <li id="li2"><a href="#header1">Jump to Top</a></li>
+    </ul>
 
   </body>
 </html>

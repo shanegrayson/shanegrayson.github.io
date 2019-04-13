@@ -10,8 +10,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
+  <style media="screen">
+    /* Used to create a Horizontal List Bar */
+    #header1 {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333333;
+    }
+
+    #li1 {
+      float: left;
+    }
+
+    #li1 a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    #li1 a:hover {
+      background-color: #111111
+    }
+
+  </style>
+
   <!-- Visiable page content -->
   <body style="background-color:dimgrey; color:white">
+
+    <!-- header bar for website -->
+    <ul id="header1">
+      <li id="li1"><a href="/index.html">Home</a></li>
+      <li id="li1"><a href="/index.html">Resume</a></li>
+      <li id="li1"><a href="/index.html">Contact</a></li>
+      <li id="li1"><a href="/index.html">About</a></li>
+      <li id="li1"><a href="https://www.w3schools.com/html/html_classes.asp">
+        Current W3 Section</a></li>
+    </ul>
+
+    <br>
 
     <!-- title= here allows highlighting and showing text -->
     <h1 title="I'm a tool">My First Heading</h1>
@@ -250,6 +290,94 @@
 
     <p>You can make a style sheet class for alt, width and height</p>
     <p>But try to avoid that and just use an inline style attribute</p>
+
+    <!-- changes the bullet points -->
+    <ul style="list-style-type:circle;">
+      <li>Somehting</li>
+      <li>Something</li>
+      <li>someTHING</li>
+    </ul>
+
+    <ol type="1">
+      <li>This is 1</li>
+      <li>This is 2</li>
+      <li>This is 4</li>
+    </ol>
+
+    <ol type="a">
+      <li>This is 1</li>
+      <li>This is 2</li>
+      <li>This is 4</li>
+    </ol>
+
+    <ol type="A">
+      <li>This is 1</li>
+      <li>This is 2</li>
+      <li>This is 4</li>
+    </ol>
+
+    <ol type="I">
+      <li>This is 1</li>
+      <li>This is 2</li>
+      <li>This is 4</li>
+    </ol>
+
+    <ol type="i">
+      <li>This is 1</li>
+      <li>This is 2</li>
+      <li>This is 4</li>
+    </ol>
+
+    <dl>
+      <dt>Coffee</dt>
+      <dd>- what?</dd>
+      <dt>Tea</dt>
+      <dd>- good?</dd>
+    </dl>
+
+    <!-- broken due to making header -->
+    <ul>
+      <li>Not tea</li>
+        <ul>
+          <li>disgusting</li>
+        </ul>
+      <li>Tea</li>
+        <ul>
+          <li>Good choices</li>
+        </ul>
+    </ul>
+
+    <ol start="43">
+      <li>Tea</li>
+      <li>good Tea</li>
+      <li>more good Tea</li>
+    </ol>
+
+    <div class="">
+      Hello
+    </div>
+    <div class="">
+      World
+    </div>
+
+    <span>
+      Spanning stuff I gues? Do not really know what they mean by not spanning!!
+    </span>
+
+    <!-- Divs are used as containers for other HTML elements -->
+    <div style="background-color:black; color:white; padding:10px; font-size:20px">
+      <pre>
+        !#/bin/bash
+        ANS=$1
+        if [ $1 == 33 ]; then
+          echo this is the number 33!
+      </pre>
+    </div>
+
+    <!-- span usually used to color parts of strings -->
+    <div class="">
+      <h3>How to <span style="color:red">WIN</span> over everyone!</h3>
+    </div>
 
   </body>
 </html>

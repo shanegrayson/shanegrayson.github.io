@@ -6,8 +6,21 @@
   <!-- this is data about the HTML document and not displayed -->
   <head>
     <title>Shane's Simple HTML Examples</title>
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30">
+
+    <!-- site tags -->
+    <meta name="description" content="Testing HTML5/CSS5/JS stuff">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Shane Grayson">
+
+    <!-- base level path for content -->
+    <!--
+    <base href="https://shanegrayson.github.io/" target="_blank">
+    -->
   </head>
 
   <style media="screen">
@@ -74,11 +87,108 @@
       font-family: monospace;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
+    header {
+      background-color: #111;
+      padding: 30px;
+      text-align: center;
+      font-size: 10vw;
+      color: white;
+    }
+
+    /*
+    Could use this to design navs and footers, but I will
+    stick with this
+    */
+    nav {
+      ;
+    }
+
+    /*
+    The media query is changing the width element when the
+    viewport gets under 800px for the stataed ids
+    */
+    .left {
+      background-color: yellow;
+      float: left;
+      width: 20%;
+    }
+
+    .right {
+      background-color: lightblue;
+      float: left;
+      width: 20%;
+    }
+
+    .main {
+      background-color: black;
+      float: left;
+      width: 60%;
+    }
+
+    @media screen and (max-width:600px) {
+      .left, .right, .main {
+        width:100%;
+      }
+    }
+
   </style>
 
-  <!-- Visiable page content -->
-  <body style="background-color:dimgrey; color:white">
+  <noscript>
+    Who cannot support JavaScript in this day and age?
+  </noscript>
 
+  <script>
+    /*
+    these funcs are just cycling through style formats
+    and chnaging each element such as:
+    backgroundColor="some color" which is just written as
+    document.getElementById.style.backgroundColor="Black";
+    Which just changes the elemnt
+    */
+
+    function hideDokis() {
+      var x = document.getElementsByClassName("bestWifus");
+      for (var i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+    }
+
+    //Traditional Java comments allowed!
+    /* yippe! */
+    function showDokis() {
+      var x = document.getElementsByClassName("bestWifus");
+      for (var i = 0; i < x.length; i++) {
+        x[i].style.display = "";
+      }
+    }
+
+    function changeDokis() {
+      var x = document.getElementsByClassName("bestWifus");
+      for (var i = 0; i < x.length; i++) {
+        x[i].style.backgroundColor="Black";
+        x[i].style.color="White";
+      }
+    }
+
+    function revertDokis() {
+      var x = document.getElementsByClassName("bestWifus");
+      for (var i = 0; i < x.length; i++) {
+        x[i].style.backgroundColor="Pink";
+        x[i].style.color="Black";
+      }
+    }
+
+    function displayTruth() {
+      document.getElementById("trueDoki").innerHTML = "Monika is actually best!";
+    }
+  </script>
+
+  <!-- Just used to designate navigation bar -->
+  <nav>
     <!-- header bar for website -->
     <ul id="header1">
       <li id="li1"><a href="/index.html">Home</a></li>
@@ -89,6 +199,14 @@
         Current W3 Section</a></li>
       <li id="li1"><a href="#header2">Jump to Bottom</a></li>
     </ul>
+  </nav>
+
+  <header>
+    This is Shane's Website!
+  </header>
+
+  <!-- Visiable page content -->
+  <body style="background-color:dimgrey; color:white">
 
     <br>
 
@@ -296,31 +414,33 @@
     <!-- these have transparency for background colors-->
     <h1 style="background-color:rgba(155, 200, 99, 0.5)">Hello There!</h1>
 
-    <!-- this shows adding hovering text info and accessing local photos -->
-    <a href="/simple-css-examples.html">
-      <img
-      src="https://media.tenor.com/images/d3a8b67bf626f8f1556e0524cd389a90/tenor.gif"
-      alt="It's Monika ^_^"
-      title="She is best wifu!"
-      style="width:20pc;height:250px;border:0;"
-      >
-    </a>
+    <section>
+      <!-- this shows adding hovering text info and accessing local photos -->
+      <a href="/simple-css-examples.html">
+        <img
+        src="https://media.tenor.com/images/d3a8b67bf626f8f1556e0524cd389a90/tenor.gif"
+        alt="It's Monika ^_^"
+        title="She is best wifu!"
+        style="width:20pc;height:250px;border:0;"
+        >
+      </a>
 
-    <br>
-    <p>any pics?</p>
-    <br>
-    <!-- this allows you to have dynamic image posting based off of size -->
-    <picture>
-      <source
-      media="(min-width: 500px)"
-      srcset="https://orig00.deviantart.net/c886/f/2018/051/c/f/cf93d8d11ec4d27694f9d2057c5b7249-dc3smqy.gif"
-      style="width:600px;height:800px;border:0;"
-      >
-      <img
-      src="https://media.tenor.com/images/d3a8b67bf626f8f1556e0524cd389a90/tenor.gif"
-      style="width:400px;height:250px;border:0;"
-      >
-    </picture>
+      <br>
+      <p>any pics?</p>
+      <br>
+      <!-- this allows you to have dynamic image posting based off of size -->
+      <picture>
+        <source
+        media="(min-width: 500px)"
+        srcset="https://orig00.deviantart.net/c886/f/2018/051/c/f/cf93d8d11ec4d27694f9d2057c5b7249-dc3smqy.gif"
+        style="width:600px;height:800px;border:0;"
+        >
+        <img
+        src="https://media.tenor.com/images/d3a8b67bf626f8f1556e0524cd389a90/tenor.gif"
+        style="width:400px;height:250px;border:0;"
+        >
+      </picture>
+    </section>
 
     <br>
 
@@ -330,67 +450,70 @@
     <p>You can make a style sheet class for alt, width and height</p>
     <p>But try to avoid that and just use an inline style attribute</p>
 
-    <!-- changes the bullet points -->
-    <ul style="list-style-type:circle;">
-      <li>Somehting</li>
-      <li>Something</li>
-      <li>someTHING</li>
-    </ul>
+    <aside>
+      <!-- changes the bullet points -->
+      <ul style="list-style-type:circle;">
+        <li>Somehting</li>
+        <li>Something</li>
+        <li>someTHING</li>
+      </ul>
 
-    <ol type="1">
-      <li>This is 1</li>
-      <li>This is 2</li>
-      <li>This is 4</li>
-    </ol>
+      <ol type="1">
+        <li>This is 1</li>
+        <li>This is 2</li>
+        <li>This is 4</li>
+      </ol>
 
-    <ol type="a">
-      <li>This is 1</li>
-      <li>This is 2</li>
-      <li>This is 4</li>
-    </ol>
+      <ol type="a">
+        <li>This is 1</li>
+        <li>This is 2</li>
+        <li>This is 4</li>
+      </ol>
 
-    <ol type="A">
-      <li>This is 1</li>
-      <li>This is 2</li>
-      <li>This is 4</li>
-    </ol>
+      <ol type="A">
+        <li>This is 1</li>
+        <li>This is 2</li>
+        <li>This is 4</li>
+      </ol>
 
-    <ol type="I">
-      <li>This is 1</li>
-      <li>This is 2</li>
-      <li>This is 4</li>
-    </ol>
+      <ol type="I">
+        <li>This is 1</li>
+        <li>This is 2</li>
+        <li>This is 4</li>
+      </ol>
 
-    <ol type="i">
-      <li>This is 1</li>
-      <li>This is 2</li>
-      <li>This is 4</li>
-    </ol>
+      <ol type="i">
+        <li>This is 1</li>
+        <li>This is 2</li>
+        <li>This is 4</li>
+      </ol>
 
-    <dl>
-      <dt>Coffee</dt>
-      <dd>- what?</dd>
-      <dt>Tea</dt>
-      <dd>- good?</dd>
-    </dl>
+      <dl>
+        <dt>Coffee</dt>
+        <dd>- what?</dd>
+        <dt>Tea</dt>
+        <dd>- good?</dd>
+      </dl>
 
-    <!-- broken due to making header -->
-    <ul>
-      <li>Not tea</li>
-        <ul>
-          <li>disgusting</li>
-        </ul>
-      <li>Tea</li>
-        <ul>
-          <li>Good choices</li>
-        </ul>
-    </ul>
+      <!-- broken due to making header -->
+      <ul>
+        <li>Not tea</li>
+          <ul>
+            <li>disgusting</li>
+          </ul>
+        <li>Tea</li>
+          <ul>
+            <li>Good choices</li>
+          </ul>
+      </ul>
 
-    <ol start="43">
-      <li>Tea</li>
-      <li>good Tea</li>
-      <li>more good Tea</li>
-    </ol>
+      <ol start="43">
+        <li>Tea</li>
+        <li>good Tea</li>
+        <li>more good Tea</li>
+      </ol>
+
+    </aside>
 
     <div class="">
       Hello
@@ -420,12 +543,20 @@
       <h3>How to <span style="color:red">WIN</span> over everyone!</h3>
     </div>
 
-    <button type="button" name="Hide Dokis" onclick="hideDokis()">
+    <button type="button" name="Hide the Dokis" onclick="hideDokis()">
       Hide the Dokis!
     </button>
 
-    <button type="button" name="Show Dokis" onclick="showDokis()">
+    <button type="button" name="Show the Dokis" onclick="showDokis()">
       Show the Dokis!
+    </button>
+
+    <button type="button" name="Change the Dokis" onclick="changeDokis()">
+      Show the Dokis!
+    </button>
+
+    <button type="button" name="Change the Dokis" onclick="revertDokis()">
+      Revert the Dokis!
     </button>
 
     <div class="bestWifus">
@@ -448,33 +579,11 @@
       </h3>
     </div>
 
-    <script>
-      function hideDokis() {
-        var x = document.getElementsByClassName("bestWifus");
-        for (var i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-      }
-
-      function showDokis() {
-        var x = document.getElementsByClassName("bestWifus");
-        for (var i = 0; i < x.length; i++) {
-          x[i].style.display = "";
-        }
-      }
-    </script>
-
     <h2 id="trueDoki">Who is the best Doki?</h2>
 
     <button type="button" name="the truth" onclick="displayTruth()">
       Whos the best Doki?
     </button>
-
-    <script>
-      function displayTruth() {
-        document.getElementById("trueDoki").innerHTML = "Monika is actually best!";
-      }
-    </script>
 
     <br>
 
@@ -495,10 +604,58 @@
     style="width:100%;height:550px;border:none;">
     </iframe>
 
-    <!-- header bar for website -->
-    <ul id="header2">
-      <li id="li2"><a href="#header1">Jump to Top</a></li>
-    </ul>
+    <div class="left">
+      Testing
+    </div>
+
+    <div class="main">
+      Testing
+    </div>
+
+    <div class="right">
+      Testing
+    </div>
+
+    <br></br>
+    <br>
+
+    <code>
+      int x = 5;<br>
+      int y = 3;<br>
+      return x + y;<br>
+    </code>
+
+    <br>
+
+    <p>This KBD seems <kbd>just some text Form</kdb>.</p>
+
+    <p>This is STDERR output <samp>Error!</samp></p>
+
+    <p>Useful for functions: "<var>E=mc<sup>2</sup></var>"</p>
+
+    <table>
+      <tr style="background-color:lightgrey;color:black;">
+        <th>Result</th>
+        <th>Desc</th>
+        <th>Entity</th>
+        <th>Entity Num</th>
+      </tr>
+      <tr style="background-color:lightblue;color:black;">
+        <td> </td>
+        <td>non-breaking</td>
+        <td>&amp;nbsp;</td>
+        <td>&amp;#160;</td>
+      </tr>
+    </table>
+
+    <div>
+      <footer>
+        <!-- header bar for website -->
+        <ul id="header2">
+          <li id="li2"><a href="#header1">Jump to Top</a></li>
+        </ul>
+      </footer>
+    </div>
 
   </body>
 </html>

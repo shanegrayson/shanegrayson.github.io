@@ -16,7 +16,7 @@
   opacity: 0;
 }
 
-.menu-wrap .toggler:hover {
+.menu-wrap .toggler:hover + .hamburger {
   transform: rotate(180deg);
 }
 

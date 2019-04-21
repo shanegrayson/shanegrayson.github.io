@@ -9,10 +9,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 4;
   cursor: pointer;
-  cursor: 50px;
   height: 50px;
+  width: 50px;
   opacity: 0;
 }
 

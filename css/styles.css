@@ -1,6 +1,6 @@
 :root {
-  --primary-color: rgb(13, 110, 139, 0.75);
-  --overlay-color: rgb(24, 39, 51, 0.85);
+  --primary-color: rgba(13, 110, 139, 0.75);
+  --overlay-color: rgba(24, 39, 51, 0.85);
   --menu-speed: 0.75s;
 }
 
@@ -33,7 +33,7 @@ body { /* changes all body that using this in their header */
 /* C:\Users\Shane\Desktop\my-website\shanegrayson.github.io\img\MonikaAtBeach.jpg */
 .showcase:before {
   content: '';
-  background: url('\img\MonikaAtBeach.jpg') no-repeat center center/cover;
+  background: url('https://i.kym-cdn.com/photos/images/original/001/305/354/115.jpg') no-repeat center center/cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -66,8 +66,8 @@ body { /* changes all body that using this in their header */
   color: #fff;
   padding: 0.75rem 1.5rem;
   margin-top: 1rem;
-  text-decoration: none;
   transition: opacity 1s ease-in-out;
+  text-decoration: none;
 }
 
 .btn:hover {

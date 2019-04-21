@@ -55,13 +55,13 @@
   background: inherit;
 }
 
+.menu-wrap .toggler:hover {
+  transform: rotate(180deg);
+}
+
 /* moves line down */
 .menu-wrap .hamburger > div:after {
   top: 10px;
-}
-
-.menu-wrap .toggler:hover + .hamburger > div {
-  transform: rotate(180deg);
 }
 
 /* toggler animate */

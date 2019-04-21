@@ -16,7 +16,9 @@
   opacity: 0;
 }
 
-.menu-wrap .toggler:hover + .hamburger {
+.menu-wrap .toggler:checked + .hamburger:before,
+.menu-wrap .toggler:checked + .hamburger:after {
+  top: 0;
   transform: rotate(180deg);
 }
 

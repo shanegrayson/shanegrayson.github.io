@@ -31,10 +31,6 @@
   justify-content: center;
 }
 
-.menu-wrap .hamburger:hover {
-  transform: rotate(180deg);
-}
-
 /* hamburder line */
 .menu-wrap .hamburger > div {
   position: relative;
@@ -62,6 +58,11 @@
 /* moves line down */
 .menu-wrap .hamburger > div:after {
   top: 10px;
+}
+
+/* toggler animate */
+.menu-wrap .toggler:hover + .hamburger > div {
+  transform: rotate(180deg);
 }
 
 /* toggler animate */

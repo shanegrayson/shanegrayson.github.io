@@ -16,10 +16,6 @@
   opacity: 0;
 }
 
-.menu-wrap .hamburger:checked:hover {
-  transform: rotate(180deg);
-}
-
 .menu-wrap .hamburger {
   position: absolute;
   top: 0;
@@ -33,6 +29,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.menu-wrap .hamburger:hover {
+  transform: rotate(180deg);
 }
 
 /* hamburder line */

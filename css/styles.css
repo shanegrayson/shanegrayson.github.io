@@ -1,7 +1,7 @@
 :root {
   --primary-color: rgba(10, 30, 60, 0.65);
-  --overlay-color: rgba(0, 0, 0, 0.75);
-  --menu-speed: 0.75s;
+  --overlay-color: rgba(0, 0, 0, 0.90);
+  --menu-speed: 0.8s;
 }
 
 * {
@@ -29,8 +29,7 @@ body { /* changes all body that using this in their header */
   position: relative;
 }
 
-/* \img\MonikaAtBeach.jpg */
-/* C:\Users\Shane\Desktop\my-website\shanegrayson.github.io\img\MonikaAtBeach.jpg */
+/* background picture */
 .showcase:before {
   content: '';
   background: url('https://i.kym-cdn.com/photos/images/original/001/305/354/115.jpg') no-repeat center center/cover;
@@ -52,7 +51,7 @@ body { /* changes all body that using this in their header */
 }
 
 .showcase h1 {
-  font-size: 4rem;
+  font-size: 3.23rem;
 }
 
 .showcase p {
@@ -61,7 +60,7 @@ body { /* changes all body that using this in their header */
 
 .btn {
   display: inline-block;
-  border: none;
+  border-radius: 8px;
   background-color: var(--primary-color);
   color: #fff;
   padding: 0.75rem 1.5rem;
@@ -71,5 +70,5 @@ body { /* changes all body that using this in their header */
 }
 
 .btn:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }

@@ -1,115 +1,75 @@
-
-body { /* changes all body that using this in their header */
-  background-color: lightgrey;
+:root {
+  --primary-color: rgb(13, 110, 139, 0.75);
+  --overlay-color: rgb(24, 39, 51, 0.85);
+  --menu-speed: 0.75s;
 }
 
-h1 { /* changes all h1s that using this in their header */
-  color: blue;
-  font-size: 300%;
-  font-family: courier;
-}
-
-p { /* changes all paragraphs that using this in their header */
-  color: red;
-  font-size: 300%;
-  font-family: courier;
-  border: 4px solid gold;
-  margin: 50px;
-  padding: 30px;
-}
-
-#pFirst { /* changes all elemnts tagged with this name */
-  color: blue;
-  font-size: 200%;
-  font-style: italic;
-  font-family: sans-serif;
-}
-
-p.error { /* changes all elements that use this */
-  color: red;
-}
-
-a:link, a:visited { /* settings for lins */
-  color: white;
-  background-color: #74433f;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-a:hover, a:active { /* settings for lins */
-  background-color: red;
-}
-
-table, th, td {
-  border: 1px solid black;
-  border: collapse;
-}
-
-th, td {
-  padding: 15px;
-}
-
-th {
-  text-align: left;
-}
-
-table {
-  border-spacing: 5px;
-}
-
-caption {
-  font-size: 75px;
-  font-style: italic;
-  color: yellow;
-}
-
-table#tbl01 th {
-  border: 3px solid green;
-  background-color: pink
-}
-
-table#tbl01 tr{
-  border: 2px solid black;
-  background-color: white;
-}
-
-/* Used to create a Horizontal List Bar */
-#header1 {
-  list-style-type: none;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body { /* changes all body that using this in their header */
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
   overflow: hidden;
-  background-color: #333333;
+  padding: 0 3rem;
 }
 
-#li1 {
-  float: left;
+.showcase {
+  background-color: var(--primary-color);
+  color: #fff;
+  height: 100vh;
+  position: relative;
 }
 
-#li1 a {
-  display: block;
-  color: white;
+/* \img\MonikaAtBeach.jpg */
+/* C:\Users\Shane\Desktop\my-website\shanegrayson.github.io\img\MonikaAtBeach.jpg */
+.showcase:before {
+  content: '';
+  background: url('\img\MonikaAtBeach.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.showcase .showcase-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 16px;
+  height: 100%;
+}
+
+.showcase h1 {
+  font-size: 4rem;
+}
+
+.showcase p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
   text-decoration: none;
+  transition: opacity 1s ease-in-out;
 }
 
-#li1 a:hover {
-  background-color: #111111
-}
-
-.bestWifus {
-  background-color: pink;
-  color: black;
-  margin: 20px;
-  padding: 20px;
-}
-
-span.note {
-  font-size: 150%;
-  color: red;
-  background-color: lightgrey;
-  font-family: monospace;
+.btn:hover {
+  opacity: 0.7;
 }

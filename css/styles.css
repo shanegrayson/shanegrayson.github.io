@@ -33,11 +33,10 @@ body { /* changes all body that using this in their header */
 .showcase:before {
   content: '';
   /* Milkyway */
-  background: url('https://i.redd.it/b04tmbh7vro31.jpg') no-repeat center center/cover;
+  /* background: url('https://i.redd.it/b04tmbh7vro31.jpg') no-repeat center center/cover; */
   /* Monika */
-  /*
-  background: url('https://i.kym-cdn.com/photos/images/original/001/305/354/115.jpg') no-repeat center center/cover;
-  */
+  /* background: url('https://i.kym-cdn.com/photos/images/original/001/305/354/115.jpg') no-repeat center center/cover; */
+  background: url('https://shanes-personal-website.s3-us-west-2.amazonaws.com/Undertale-Wallpapers-HD.png');
   position: absolute;
   top: 0;
   left: 0;
